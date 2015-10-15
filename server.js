@@ -22,8 +22,8 @@ var router = express.Router(); // get an instance of the express Router
 
 // REGISTER OUR ROUTES -------------------------------
 require('./app/routes/auth.routes')(app, router);
-require('./app/routes/user.routes')(app, router);
 require('./app/middlewares/auth.middleware')(app, router);
+require('./app/routes/user.routes')(app, router);
 require('./app/routes/pearl.routes')(app, router);
 
 app.use('/api', router);
