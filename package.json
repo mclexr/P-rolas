@@ -5,9 +5,10 @@
     "main": "server.js",
     "dependencies": {
         "express": "~4.5.1",
-        "mongoose": "~3.8.0",
+        "mongoose": "*",
         "body-parser": "~1.4.2",
-        "jsonwebtoken": "*"
+        "jsonwebtoken": "*",
+        "crypto-js": "*"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +18,9 @@
         "url": "git+https://github.com/mclexr/Perolas.git"
     },
     "keywords": [
-    "mean"
+    "mean",
+    "pearls",
+    "angularjs"
   ],
     "author": "Michael Fidelis",
     "license": "ISC",

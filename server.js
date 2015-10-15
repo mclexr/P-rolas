@@ -31,4 +31,4 @@ app.use('/api', router);
 // START THE SERVER
 // =============================================================================
 app.listen(port);
-console.log('Serer running on port ' + port);
+console.log('Server running on port ' + port);

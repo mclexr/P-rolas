@@ -1,4 +1,5 @@
 var jwt = require('jsonwebtoken');
+var SHA256 = require('crypto-js/sha256');
 var User = require('../models/user');
 
 module.exports = function (app, router) {
@@ -18,7 +19,7 @@ module.exports = function (app, router) {
                 });
             } else if (user) {
 
-                if (user.password != req.body.password) {
+                if (user.password != SHA256(req.body.password)) {
                     res.status(401).json({
                         message: 'Authentication failed. Wrong password.'
                     });

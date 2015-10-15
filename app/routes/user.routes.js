@@ -1,4 +1,5 @@
 var User = require('../models/user');
+var SHA256 = require('crypto-js/sha256');
 
 module.exports = function (app, router) {
 
@@ -8,7 +9,7 @@ module.exports = function (app, router) {
             var user = new User();
             user.name = req.body.name;
             user.email = req.body.email;
-            user.password = req.body.password;
+            user.password = SHA256(req.body.password);
 
             user.save(function (err) {
                 if (err)
@@ -44,7 +45,7 @@ module.exports = function (app, router) {
 
                 user.name = req.body.name || user.name;
                 user.email = req.body.email || user.email;
-                user.password = req.body.password || user.password;
+                user.password = SHA256(req.body.password) || user.password;
 
                 user.save(function (err) {
                     if (err)
