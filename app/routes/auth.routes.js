@@ -34,7 +34,8 @@ module.exports = function (app, router) {
 
                     // return the information including token as JSON
                     res.status(200).json({
-                        token: token
+                        token: token,
+                        expiration: Date.now() + 3600
                     });
                 }
 
