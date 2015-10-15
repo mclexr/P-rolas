@@ -1,0 +1,19 @@
+<ion-view title="Nova pérola">
+    <ion-content padding="true" class="has-header">
+        <form class="list">
+            <label class="item item-input" name="quando">
+                <input type="text" placeholder="Quando?" ng-model="perola.quando">
+            </label>
+               <label class="item item-input" name="quem">
+                <input type="text" placeholder="Quem disse?" ng-model="perola.quem">
+            </label>
+            <label class="item item-input" name="praquem">
+                <input type="text" placeholder="Pra quem?" ng-model="perola.praQuem">
+            </label>
+            <label class="item item-input" name="oque">
+                <input type="text" placeholder="O que disse?" ng-model="perola.oQue">
+            </label>
+        </form>
+        <a href="#/perolas" class="button button-positive button-block" ng-click="novaPerola()">Publicar</a>
+    </ion-content>
+</ion-view>
