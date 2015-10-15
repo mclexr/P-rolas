@@ -21,7 +21,7 @@ var port = process.env.PORT || 3001; // set our port
 var router = express.Router(); // get an instance of the express Router
 
 // REGISTER OUR ROUTES -------------------------------
-require('./app/middlewares/cors.middleware')(app, router);
+require('./app/middlewares/headers.middleware')(app, router);
 require('./app/routes/auth.routes')(app, router);
 require('./app/middlewares/auth.middleware')(app, router);
 require('./app/routes/user.routes')(app, router);
